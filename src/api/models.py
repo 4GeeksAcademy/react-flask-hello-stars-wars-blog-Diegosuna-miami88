@@ -55,7 +55,7 @@ class Character(db.Model):
             "name":self.name,
             "age": self.age,
             "planet_of_origin": self.planet_of_origin.serialize
-            # do not serialize the password, its a security breach
+            
         }
 
 class Planet(db.Model):
@@ -70,7 +70,7 @@ class Planet(db.Model):
          return {
             "id": self.id,
             "density": self.density,
-            "population": 
+            "population": self.population 
         }
         
         
