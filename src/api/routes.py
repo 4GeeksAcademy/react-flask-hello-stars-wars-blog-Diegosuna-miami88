@@ -64,7 +64,7 @@ def create_token():
     if user is None:
         return jsonify({"msg": "Bad email or password"}), 401
     
-    access_token = create_access_token(idnetity=str(user.id))
+    access_token = create_access_token(identity=str(user.id))
     return jsonify({"token": access_token, "user_id": user.id, "email": user.email}), 200
     
 
